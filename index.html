@@ -2,9 +2,91 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Vacation Destinations WishList</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+  <body cz-shortcut-listen="true">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-4">Car Sales Enterprise</h1>
+        <p class="lead">
+          A new way to purchase a vehicle - worry free and stress free. Please
+          utilize the form below to find your new vechicle.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <form id="destination_details_form">
+            <div class="form-group">
+              <label for="name"><strong> Full name</strong></label>
+              <input
+                required=""
+                minlength="2"
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Please enter your full name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="location"><strong> Vehicle type</strong></label>
+              <input
+                required=""
+                minlength="2"
+                type="text"
+                class="form-control"
+                id="location"
+                placeholder="What type of vehicle would you like ?"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="photo"><strong> Vehicle Colour</strong></label>
+              <select class="form-control" id="Colours">
+                <option style="color: red">Red</option>
+                <option style="color: black">Black</option>
+                <option style="color: orange">Orange</option>
+                <option style="color: green">Green</option>
+                <option style="color: grey">Grey</option>
+                <option style="color: blue">Blue</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="description"
+                ><strong> Additional Info (Optional)</strong></label
+              >
+              <textarea
+                type="text"
+                class="form-control"
+                id="description"
+                placeholder="Enter anything else you would like."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit_btn">
+              Find Vehicle
+            </button>
+          </form>
+        </div>
+        <div class="col-md-9">
+          <h4 id="title">Car search list</h4>
+          <div id="destinations_container"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
